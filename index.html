@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Treasure Hunt</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ff99;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid #00ff99;
+      max-width: 500px;
+    }
+
+    .emoji-question {
+      font-size: 2.5em;
+      margin: 20px 0;
+      word-break: break-word;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      background-color: #000;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: #00ff99;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .reward {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #00ff99;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #00ff99;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Emoji Treasure Hunt</h2>
+    <p>Di antara emoji ini, hanya satu yang benar!</p>
+    <div class="emoji-question">🤪🤡👻👺☠️🙈😸🤤😏🤑🤤🙂🤭🤫</div>
+
+    <input type="text" id="answer" placeholder="Ketik 1 emoji pilihanmu...">
+    <button onclick="checkAnswer()">Cek Jawaban</button>
+
+    <div class="reward" id="reward">
+      <p>Selamat! Kamu berhasil!</p>
+      <a href="https://link.dana.id/danakaget?c=sztc32u8f&r=gG6E86&orderId=20250416101214371215010300166662418175138" target="_blank">
+        Klaim Hadiahmu di sini
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.trim();
+      const correct = "🤑";
+
+      if (input === correct) {
+        document.getElementById("reward").style.display = "block";
+      } else {
+        alert("Belum tepat! Coba emoji lain!");
+      }
+    }
+  </script>
+</body>
+</html>
